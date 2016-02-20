@@ -8,11 +8,22 @@ import java.util.HashMap;
 
 public final class Indexer {
 	public static void main(String [] args) {
-		System.out.println("Hello bitch");
+		
 		//searches the directory that you are using for storing the pages
 	    //change it to your own
-	    File dir = new File("/Users/Jared/Programs/cs121/Assignment 3/Pages/");
+		System.out.println("Working Directory = " +
+	              System.getProperty("user.dir") + "/data/Html/");
+		
+		
+	    File dir = new File(System.getProperty("user.dir") + "/data/Html/");
 	    File [] paths = dir.listFiles();
+	    
+	    for(File path : paths) 
+	    {
+	    	System.out.println(path);
+	    }
+	    
+	    System.exit(0);
 	    HashMap<String, Integer> term2termid = new HashMap<String, Integer>();
 	    HashMap<Integer, String> termid2term = new HashMap<Integer,String>();
 	    HashMap<String, Integer> doc2docid = new HashMap<String, Integer>();

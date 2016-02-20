@@ -1,5 +1,3 @@
-package ir.assignments.three;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +20,7 @@ public final class Indexer {
 	    {
 	    	System.out.println(path);
 	    }
-	    
+	    	    
 	    System.exit(0);
 	    HashMap<String, Integer> term2termid = new HashMap<String, Integer>();
 	    HashMap<Integer, String> termid2term = new HashMap<Integer,String>();

@@ -67,6 +67,17 @@ public class Utilities {
 		return tokens;*/
 	}
 	
+	public static ArrayList<String> tokenizeString(String input){
+		ArrayList<String> tokens = new ArrayList<String>();
+			
+		//parsing...
+		input = input.replaceAll("[^0-9a-zA-Z]", " ");//replace all puncutation with " "
+		input = input.replaceAll("\\s+", " ");//replace multiple spacing/returns with " " 
+		for(String token : input.toLowerCase().split(" "))//split into tokens on " " 					tokens.add(token);//add token to the arraylist
+			tokens.add(token);//return tokens;
+		return tokens;
+	}
+	
 	/**
 	 * Takes a list of {@link Frequency}s and prints it to standard out. It also
 	 * prints out the total number of items, and the total number of unique items.
